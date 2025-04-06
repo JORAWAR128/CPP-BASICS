@@ -1,4 +1,6 @@
+#include<iostream>
 #include<bits/stdc++.h>
+
 using namespace std;
 
 int binsearch(int arr[], int size, int key){
@@ -7,7 +9,7 @@ int binsearch(int arr[], int size, int key){
     int end = size-1;
 
     // int mid = (start+end)/2;
-    int mid = start + (end - start)/2;
+    int mid =start + (end - start)/2;
 
     while(start<=end){
         if(arr[mid] == key){
@@ -21,7 +23,7 @@ int binsearch(int arr[], int size, int key){
         }
 
         // mid = (start+end)/2;
-        mid = start + (end - start)/2;
+        mid =start + (end - start)/2;
 
     }
     return -1;
