@@ -10,7 +10,7 @@ void addbinary(int a,int b){
         s=s>>1;
         i++;
     }
-    cout<<"sum of binary is :-"<<y;
+    cout<<"sum of binary is : "<<y;
 }
 int main(){
     int a,b,i=0,j=0,r,r1,a1=0,b1=0;
