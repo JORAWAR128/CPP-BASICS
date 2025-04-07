@@ -1,6 +1,5 @@
 #include<bits/stdc++.h>
 using namespace std;
-
 bool ispresent(int arr[][4],int t,int row,int col){
     for(int row=0;row<3;row++){
          for(int col=0;col<4;col++){
@@ -57,15 +56,17 @@ int largestrowsum(int arr[][4],int row,int col){
 }
 
 int main()
-{
+{   int I;
+    cout<<"Enter order of matrix "<<endl;
+    cin>>I;
     //creating 2D array
-    int arr[3][4];
+    int arr[I][4];
     //int arr[3][4]={1,2,3,4,5,6,7,8,9,10,11,12};
     //int arr[3][4]={{1,11,111,1111},{2,22,222,2222},{3,33,333,3333}};
 
     cout<<"Enter the array elements: "<<endl;
     //taking input(row wise)
-     for(int row=0;row<3;row++){
+     for(int row=0;row<I;row++){
          for(int col=0;col<4;col++){
              cin>>arr[row][col];
          }
@@ -80,9 +81,9 @@ int main()
     */
     //print
     cout<<"The array: "<<endl;
-    for(int i=0;i<3;i++){
+    for(int i=0;i<I;i++){
          for(int j=0;j<4;j++){
-             cout<<arr[i][j]<<" ";
+             cout<<arr[I][4]<<" ";
          }
          cout<<endl;
      }
@@ -91,16 +92,16 @@ int main()
      int t;
      cin>>t;
 
-     if(ispresent(arr,t,3,4)){
+     if(ispresent(arr,t,I,4)){
          cout<<"Element found."<<endl;
      }
      else{
          cout<<"Not found."<<endl;
      }
 
-     printrowsum(arr,3,4);
-     printcolsum(arr,3,4);
-     int ans = largestrowsum(arr,3,4);
+     printrowsum(arr,I,4);
+     printcolsum(arr,I,4);
+     int ans = largestrowsum(arr,I,4);
      cout<<"Max sum is at index: "<<ans<<endl;
 
 return 0;
